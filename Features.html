@@ -1,0 +1,246 @@
+Here is the modified code for a "Student Tech Guide" page. It includes sections on essential tech tools and gadgets that students might find useful:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown Menu on Click - Student Tech Guide</title>
+<style>
+  /* Styles for the dropdown menu */
+  .footer {
+    text-align: center;
+    bottom: 0%;
+    padding-top: 30px;
+  }
+  body {
+    font-family: "Open Sans", sans-serif;
+    /* Multiple background images */
+    background: linear-gradient(
+                to bottom,
+                #b0b0b0, /* Mercury */
+                #e5e4e2, /* Venus */
+                #518eef, /* Earth */
+                #f66868, /* Mars */
+                #d1a384, /* Jupiter */
+                #f7dd67, /* Saturn */
+                #9bc4e2, /* Uranus */
+                #6285ec  /* Neptune */
+            );
+    /* Background position */
+    background-position: center;
+
+    /* Background size */
+    background-size: contain;
+
+    /* Background repeat */
+    background-repeat: no-repeat;
+
+    /* Background attachment to make it scrollable */
+    background-attachment:scroll;
+    
+    /* Other styling to ensure the page is scrollable */
+    height: auto;
+    /* Example height to enable scrolling */
+    margin: 0;
+    padding: 0;
+  }
+  .nav {
+    background-color: rgba(0,0,0,0);
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    align-items: center;
+  }
+  img {
+    border-radius: 50%;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  span {
+    margin-left: 100px;
+  }
+  /* features fieldset block */
+  fieldset {
+    display: grid;
+    width: 90%;
+    margin: 20px;
+    margin-top: 40px;
+    border: 1px solid red;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-left: 75px;
+    margin-right: auto;
+  }
+  legend {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .feature {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .feature img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+  }
+  .feature-details {
+    max-width: 600px;
+  }
+  .main-point {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .sub-point {
+    font-size: 1em;
+    margin-left: 20px;
+    list-style-type: disc;
+  }
+  hr {
+    border: 1px solid red;
+    margin: 20px 0;
+  }
+</style>
+</head>
+<body>
+<div class="nav">
+<div class="dropdown">
+  <img src="./static/img/tech-icon.png" width="50" height="50" onclick="toggleDropdown()">
+  <div class="dropdown-content" id="dropdownMenu">
+    <a href="./index.html">Home</a>
+    <a href="./about.html">About Us</a>
+    <a href="#features">Features</a>
+  </div>
+</div>
+<marquee style="color: black; font-size: 20px; font-weight: bold; border-radius: 15px; padding: 10px;">
+   Student Tech Guide_Ai_Bot
+</marquee>
+
+<script>
+  function toggleDropdown() {
+    var dropdownMenu = document.getElementById("dropdownMenu");
+    if (dropdownMenu.style.display === "block") {
+      dropdownMenu.style.display = "none";
+    } else {
+      dropdownMenu.style.display = "block";
+    }
+  }
+</script>
+</div>
+<fieldset>
+  <legend>Student Tech Guide</legend>
+  
+  <div class="feature">
+      <img src="./static/img/laptops.jpg" style="border-radius: 0;" alt="Laptop">
+      <div class="feature-details">
+          <div class="main-point">Laptops</div>
+          <ul class="sub-point">
+              <li><strong>Feature</strong>: Essential for online classes, research, and assignments.</li>
+              <li><strong>Recommended Models</strong>: MacBook Air, Dell XPS, Lenovo ThinkPad.</li>
+              <li><strong>Specs</strong>: At least 8GB RAM, SSD storage, long battery life.</li>
+          </ul>
+      </div>
+  </div>
+  <hr>
+  
+  <div class="feature">
+      <img src="./static/img/tablets.jpg" style="border-radius: 0;" alt="Tablet">
+      <div class="feature-details">
+          <div class="main-point">Tablets</div>
+          <ul class="sub-point">
+              <li><strong>Feature</strong>: Portable and versatile for note-taking and reading.</li>
+              <li><strong>Recommended Models</strong>: iPad, Samsung Galaxy Tab, Microsoft Surface Go.</li>
+              <li><strong>Accessories</strong>: Stylus, keyboard cover.</li>
+          </ul>
+      </div>
+  </div>
+  <hr>
+  
+  <div class="feature">
+      <img src="./static/img/smartphones.jpg" style="border-radius: 0;" alt="Smartphone">
+      <div class="feature-details">
+          <div class="main-point">Smartphones</div>
+          <ul class="sub-point">
+              <li><strong>Feature</strong>: Communication, organization, and research tool.</li>
+              <li><strong>Recommended Brands</strong>: Apple, Samsung, Google.</li>
+              <li><strong>Apps</strong>: Note-taking, productivity, study aids.</li>
+          </ul>
+      </div>
+  </div>
+  <hr>
+  
+  <div class="feature">
+      <img src="./static/img/smartwatch.jpg" style="border-radius: 0;" alt="Smartwatch">
+      <div class="feature-details">
+          <div class="main-point">Smartwatches</div>
+          <ul class="sub-point">
+              <li><strong>Feature</strong>: Keep track of schedules, fitness, and notifications.</li>
+              <li><strong>Recommended Models</strong>: Apple Watch, Fitbit, Samsung Galaxy Watch.</li>
+              <li><strong>Functions</strong>: Reminders, fitness tracking, health monitoring.</li>
+          </ul>
+      </div>
+  </div>
+  <hr>
+  
+  <div class="feature">
+      <img src="./static/img/headphones.jpg" style="border-radius: 0;" alt="Headphones">
+      <div class="feature-details">
+          <div class="main-point">Headphones</div>
+          <ul class="sub-point">
+              <li><strong>Feature</strong>: Noise-cancelling for better focus during study sessions.</li>
+              <li><strong>Recommended Models</strong>: Bose QC35, Sony WH-1000XM4, Apple AirPods Pro.</li>
+              <li><strong>Uses</strong>: Online classes, music, focus sessions.</li>
+          </ul>
+      </div>
+  </div>
+  <hr>
+  
+  <div class="feature">
+      <img src="./static/img/storage clouds.jpg" style="border-radius: 0;" alt="Cloud Storage">
+      <div class="feature-details">
+          <div class="main-point">Cloud Storage</div>
+          <ul class="sub-point">
+              <li><strong>Feature</strong>: Store and access notes and assignments anywhere.</li>
+              <li><strong>Recommended Services</strong>: Google Drive, Dropbox, OneDrive.</li>
+              <li><strong>Advantages</strong>: Automatic backup, file sharing, collaboration.</li>
+          </ul>
+      </div>
+  </div>
+  <hr>
+  
+</fieldset>
+<div class="footer">
+  <div class="social-icons">
+      <a href="https://www.linkedin.com/in/Student Tech Guide-ai-bot-361889315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="./static/img/linkedin_3536569.png" height="20" width="20"></a>
+      <a href="https://www.facebook.com/profile.php?id=61561541960481&mibextid=ZbWKwL"><img src="./static/img/facebook_733603.png" height="20" width="20"></a>
+  </
